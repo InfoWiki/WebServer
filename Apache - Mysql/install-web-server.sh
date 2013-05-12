@@ -12,7 +12,7 @@
 VERT="\\033[1;32m"
 NORMAL="\\033[0;39m"
 ROUGE="\\033[1;31m"
-ADDRIP=$(ifconfig eth0 | grep "inet addr" | cut -d " " -f 12 | cut -d : -f 2)
+
 
 
 clear
@@ -67,7 +67,7 @@ if [ $repphpmyadmin = "y" ]
 	else echo -e ""
 fi
 clear
-# In redémarre les services avant la fin de l'installation
+# On redémarre les services avant la fin de l'installation
 /etc/init.d/apache2 restart
 /etc/init.d/mysqld restart
 clear
